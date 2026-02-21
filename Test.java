@@ -1,19 +1,15 @@
-import java.util.Scanner;
-
 public class Test {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter a number: ");
-        int num = sc.nextInt();
+        int num = 121;   // hardcoded number for Jenkins
 
         int original = num;
         int reverse = 0;
 
         while (num != 0) {
-            int digit = num % 10;        // Get last digit
+            int digit = num % 10;
             reverse = reverse * 10 + digit;
-            num = num / 10;              // Remove last digit
+            num = num / 10;
         }
 
         if (original == reverse) {
@@ -21,7 +17,5 @@ public class Test {
         } else {
             System.out.println("Not a Palindrome Number");
         }
-
-        sc.close();
     }
 }
